@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">DataPoints</string>
+    <string name="title_activity_call__log">Call_Log</string>
 </resources>

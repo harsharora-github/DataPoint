@@ -79,4 +79,40 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="19dp"
         android:id="@+id/mem" />
+
+    <Button
+        android:id="@+id/msgbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="click for Msg headers"
+        android:layout_below="@+id/mem"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/sc_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/msgbtn"
+        android:layout_toEndOf="@+id/btnn1"
+        android:layout_toRightOf="@+id/btnn1"
+        android:text="sc_coun" />
+
+    <Button
+        android:id="@+id/calllog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/msgbtn"
+        android:layout_toLeftOf="@+id/sc_count"
+        android:layout_toStartOf="@+id/sc_count"
+        android:text="Clog" />
+
+    <Button
+        android:id="@+id/data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/msgbtn"
+        android:text="Data" />
 </RelativeLayout>

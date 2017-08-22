@@ -1,6 +1,7 @@
 package com.hmp.android.datapoints;
 
 import android.app.ActivityManager;
+import android.content.Intent;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
@@ -16,8 +17,8 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button btn,btnn1,mem;
-    TextView txt,txt1,txt2,free,occu;
+    Button btn,btnn1,mem,sc_count,clog,dat;
+    TextView txt,txt1,txt2,free,occu,msgbtn;
     String str;
     double availableMegs,percentAvail;
     float freeSpace,occupiedSpace,totalSpace;
@@ -59,9 +60,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         occu=(TextView)findViewById(R.id.occupied);
         btnn1=(Button)findViewById(R.id.btnn1);
         mem = (Button)findViewById(R.id.mem);
+        msgbtn = (Button)findViewById(R.id.msgbtn);
+        sc_count=(Button)findViewById(R.id.sc_count);
+        clog=(Button)findViewById(R.id.calllog);
+        dat=(Button)findViewById(R.id.data);
         btn.setOnClickListener(this);
         btnn1.setOnClickListener(this);
         mem.setOnClickListener(this);
+        msgbtn.setOnClickListener(this);
+        sc_count.setOnClickListener(this);
+        clog.setOnClickListener(this);
+        dat.setOnClickListener(this);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
@@ -81,6 +90,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.mem:
                 Internal_Memory_Status();
+            case R.id.msgbtn:
+                Intent myIntent = new Intent(MainActivity.this, Second.class);
+                startActivity(myIntent);
+                break;
+            case R.id.sc_count:
+                Intent myIntent1 = new Intent(MainActivity.this, Third_activity.class);
+                startActivity(myIntent1);
+                break;
+            case R.id.calllog:
+                Intent myIntent2 = new Intent(MainActivity.this, Call_Log.class);
+                startActivity(myIntent2);
+                break;
+            case R.id.data:
+
+                break;
+
         }
 
         }
